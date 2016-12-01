@@ -17,8 +17,11 @@ mkdir -p $INSTALL_DIR
 tar -zxvf $TESSERACT_OCR_TGZ -C $INSTALL_DIR
 
 
+echo $INSTALL_DIR_TRAINING_DATA
+echo $INSTALL_DIR
 echo 'Getting Tesseract-OCR training data'
-curl http://downloads.sourceforge.net/project/tesseract-ocr-alt/tesseract-ocr-3.02.eng.tar.gz -o - | tar -xz -C $INSTALL_DIR_TRAINING_DATA -f -
+tar -xvf tesseract-ocr-3.02.eng.tar.gz -C $INSTALL_DIR_TRAINING_DATA
+#curl http://downloads.sourceforge.net/project/tesseract-ocr-alt/tesseract-ocr-3.02.eng.tar.gz -o - | tar -xz -C $INSTALL_DIR_TRAINING_DATA -f -
 
 #if [ $TESSERACT_OCR_LANGUAGES ]
 #then
